@@ -1,3 +1,4 @@
+window.addEventListener("contextmenu", (e) => e.preventDefault());
 $(document).ready(function(){
    $(window).scroll(function(){
 // -------------------------------------sticky navbar on scroll script---------------------------------------//
@@ -45,13 +46,21 @@ $('.proj2').click(function(){
 });
             // ---------------- project - 3 ------------------- // 
 $('.proj3').click(function(){
-   window.open('put the project 3 link');
+   window.open('https://micloneabhi.netlify.app');
 });
             // ---------------- project - 4 ------------------- // 
 $('.proj4').click(function(){
-   window.open('put the project 4 link');
+   window.open('https://weatherappabhi.netlify.app');
 });
-
+            // ---------------- project - 5 ------------------- // 
+$('.proj5').click(function(){
+   window.open('https://reciter.netlify.app/');
+});
+                // ---------------- project - 6 ------------------- // 
+$('.proj6').click(function(){
+   window.open('https://code-to-gether.herokuapp.com/');
+});
+            
 
 //-------------------------------------typing animation script---------------------------------------------//
 
@@ -71,7 +80,7 @@ $('.proj4').click(function(){
    });
    
     $('.card').click(function(){
-       (this).find('a').trigger('click');
+       $(this).find('a').trigger('click');
     });
 
 // ---------------------------------------------owl carousel script------------------------------------ //

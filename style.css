@@ -22,7 +22,7 @@ html{
     background: #888 ;
 }
 ::-webkit-scrollbar-thumb:hover{
-    background: #555;
+    background: crimson;
 }
 
 /* ----------------------------------------all similar content styling code---------------------------------- */
@@ -352,10 +352,10 @@ section .title::after{
     background: crimson;
 }
 .skills .skills-content .left .C::before{
-    width: 80%;
+    width: 70%;
 }
 .skills .skills-content .left .Cpp::before{
-    width: 80%;
+    width: 70%;
 }
 .skills .skills-content .left .Python::before{
     width: 50%;
@@ -395,7 +395,7 @@ section .title::after{
     background: crimson;
 }
 .skills .skills-content .right .hmtlcss::before{
-    width: 80%;
+    width: 70%;
 }
 .skills .skills-content .right .react::before{
     width: 50%;
@@ -416,10 +416,14 @@ section .title::after{
    content: "who with me";
 }
 .teams .carousel .card{
+    width: 43vmax;
+    height: 25vmax;
     background: #222;
-    border-radius: 6px;
-    padding: 25px 35px;
     text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    margin: auto;
+    cursor: pointer;
     transition: all 0.3s ease;
 }
 .teams .carousel .card:hover{
@@ -651,8 +655,16 @@ footer span a:hover{
         flex: 100%;
     }
     .services .serv-content .card{
-        width: calc(50% - 10px);
+        /* width: calc(50% - 10px); */
+        height: 65vmax;
         margin-bottom: 20px;
+    }
+    .services .title{
+        padding-bottom: 10vmax;
+    }
+    .teams .carousel .card{
+        width: 52vmax;
+        height: 65vmax;
     }
     .skills .skills-content .column,
     .contact .contact-content .column{

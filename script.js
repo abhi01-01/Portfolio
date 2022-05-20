@@ -42,7 +42,7 @@ $('.proj1').click(function(){
 });
              // ------------- project - 2 ------------------- //
 $('.proj2').click(function(){
-   window.open('put the project 2 link');
+   window.open('https://ongoingpage.netlify.app/');
 });
             // ---------------- project - 3 ------------------- // 
 $('.proj3').click(function(){

@@ -264,7 +264,8 @@ section .title::after{
     background: #111;
 }
 .services .title::before,
-.teams .title::before{
+.teams .title::before,
+.projectdemo .title::before{
     background: #fff;
 }
 .services .title::after,
@@ -310,6 +311,96 @@ section .title::after{
     color: white;
 }
 
+/* -------------------------------------------projectdemo section--------------------------------------------*/
+
+.projectdemo{
+    color: #fff;
+    background: #333;
+}
+
+.projectdemo .title::after{
+    background: #333;
+    content: "Take a look";
+}
+.projectdemo .demoslider-container{
+    height: auto;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.projectdemo .demoslider-container .demoslider img{
+    width: 100%;
+    vertical-align: middle;
+}
+.prev-button ,
+.next-button{
+    width: 40px;
+    height: 60px;
+    font-size: 50px;
+    font-weight: bold;
+    color: crimson;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    transition: 0.3s ease;
+}
+.prev-button:hover ,
+.next-button:hover{
+    color: rgb(20, 107, 220);
+}
+.prev-button{
+    left: 0;
+}
+.next-button{
+    right: 0;
+}
+.lines{
+    position: absolute;
+    display: flex;
+    bottom: 10px;
+}
+.slideline{
+    padding: 1.5px 10px;
+    margin: 0 3px;
+    background-color: green ;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.activate,
+.slideline:hover{
+    background-color: rgb(20, 107, 220);
+}
+.demoslider{
+    display: none;
+    animation-name: fade;
+    animation-duration: 1.5s;
+} 
+
+@keyframes fade {
+    from{
+        opacity: 0.5;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@media (max-width:700px) {
+    
+    .prev-button,
+    .next-button{
+        font-size: 20px;
+    }
+    .slideline{
+        padding: 1px 8px;
+    }
+}
+
+
 /* ----------------------------------------------skills section start-------------------------------------- */
 
 .skills .title::after{
@@ -317,100 +408,31 @@ section .title::after{
 }
 .skills .text{
     font-size: 18px;
-    color: rgb(77, 147, 240);
-    /* color: rgb(236, 89, 73); */
+    /* color: rgb(77, 147, 240); */
+    color: rgb(79, 78, 78) ;
     font-weight: 400;
     margin-bottom: 35px;
     text-align: justify;
 }
-.skills .skills-content .column{
-    width: calc(50% - 30px);
+.skills .skills-content .left{
+    display: flex;
+    flex-wrap: wrap;
 }
 .skills .skills-content .left .bars{
-    margin-bottom: 15px;
+    margin: 15px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
 }
-.skills .skills-content .left .info{
-   display: flex;
-   margin-bottom: 5px;
-   align-items: center;
-   justify-content: space-between; 
+.skills .skills-content .left .bars h2{
+    text-align: center;
 }
-.skills .skills-content .left .span{
-    font-size: 18px;
-    font-weight: 500;
-}
-.skills .skills-content .left .line{
-    height: 5px;
-    width: 100%;
-    background: lightgrey;
-    position: relative;
-}
-.skills .skills-content .left .line::before{
-    content: "";
-    position: absolute;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: rgb(20, 107, 220);
-}
-.skills .skills-content .left .C::before{
-    width: 70%;
-}
-.skills .skills-content .left .Cpp::before{
-    width: 70%;
-}
-.skills .skills-content .left .Python::before{
-    width: 50%;
-}
-.skills .skills-content .left .js::before{
-    width: 60%;
-}
-.skills .skills-content .left .mysql::before{
-    width: 70%;
+.skills .skills-content .left .bars .my-3{
+    width: 150px;
+    height: 150px;
 }
 
-.skills .skills-content .right .bars{
-    margin-bottom: 15px;
-}
-.skills .skills-content .right .info{
-   display: flex;
-   margin-bottom: 5px;
-   align-items: center;
-   justify-content: space-between; 
-}
-.skills .skills-content .right .span{
-    font-size: 18px;
-    font-weight: 500;
-}
-.skills .skills-content .right .line{
-    height: 5px;
-    width: 100%;
-    background: lightgrey;
-    position: relative;
-}
-.skills .skills-content .right .line::before{
-    content: "";
-    position: absolute;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: rgb(20, 107, 220);
-}
-.skills .skills-content .right .hmtlcss::before{
-    width: 70%;
-}
-.skills .skills-content .right .react::before{
-    width: 50%;
-}
-.skills .skills-content .right .MongoDB::before{
-    width: 60%;
-}
-.skills .skills-content .right .NodeJS::before{
-    width: 60%;
-}
-.skills .skills-content .right .ExpressJS::before{
-    width: 50%;
-}
+
 
 /* --------------------------------teams/social media profile section start---------------------------------- */
 
@@ -619,8 +641,14 @@ footer span a:hover{
     .max-width{
         padding: 0 50px;
     }
+    .services .serv-content .card{
+        padding-top: 3vmax ;
+        height: 55vmax;
+        width: fit-content;
+        margin-bottom: 20px;
+    }
 }
-@media(max-width:947px){
+@media(max-width:950px){
     .menu-btn{
         display: block;
         z-index: 999;  
@@ -719,6 +747,10 @@ footer span a:hover{
         height: 65vmax;
         width: fit-content;
     }
+    .projectdemo .demoslider-container .demoslider img{
+        width: 100%;
+        height: 50vmax;
+    }
     .teams .carousel .card{
         width: fit-content;
         height: 60vmax;
@@ -732,9 +764,12 @@ footer span a:hover{
     .home .home-content .text-3{
         font-size: 27px;
     }
-    .about .about-content .right .text,
-    .skills .skills-content .left .text{
+    .about .about-content .right .text{
         font-size: 19px;
+    }
+    .skills .skills-content .left .bars .my-3{
+        width: 100px;
+        height: 100px;
     }
     .services .serv-content .card{
         /* width: calc(50% - 10px); */
@@ -742,7 +777,7 @@ footer span a:hover{
         width: fit-content;
     }
     .services .title{
-        padding-bottom: 8vmax;
+        padding-bottom: 7vmax;
     }
     .teams .carousel .card{
         width: fit-content;
@@ -773,6 +808,9 @@ footer span a:hover{
     }
     .services .title{
         padding-bottom: 10vmax;
+    }
+    .projectdemo .demoslider-container .demoslider img{
+        height: 60vmax;
     }
     .teams .carousel .card{
         width: fit-content;

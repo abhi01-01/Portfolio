@@ -60,7 +60,19 @@ $('.proj5').click(function(){
 $('.proj6').click(function(){
    window.open('https://code-to-gether.herokuapp.com/');
 });
-            
+        
+//--------------------------------project demomstration ----------------------------//
+
+// var index = 0 ;
+// var demoslider = document.getElementsByClassName("demoslider") ;
+// var slideline = document.getElementsByClassName("slideline") ;
+
+// function showslide(n){
+//    for( int i = 0 ; i < demoslider.length ; i++ ){
+//       demoslider[i].style.display = "none" ;
+//    }
+// }
+
 
 //-------------------------------------typing animation script---------------------------------------------//
 
@@ -107,3 +119,12 @@ $('.proj6').click(function(){
       } 
    });
 });
+
+// ------------------------------- slider sliding script --------------------------//
+
+
+
+
+
+
+

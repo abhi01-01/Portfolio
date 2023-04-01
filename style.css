@@ -445,7 +445,7 @@ section .title::after{
 }
 .teams .carousel .card{
     width: 43vmax;
-    height: 30vmax;
+    height: 35vmax;
     background: #222;
     text-align: center;
     border-radius: 6px;

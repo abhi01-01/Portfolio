@@ -1,4 +1,4 @@
-//window.addEventListener("contextmenu", (e) => e.preventDefault());
+window.addEventListener("contextmenu", (e) => e.preventDefault());
 $(document).ready(function(){
    $(window).scroll(function(){
 // -------------------------------------sticky navbar on scroll script---------------------------------------//
